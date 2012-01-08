@@ -1,4 +1,6 @@
 ReportgridEval::Application.routes.draw do
+  resources :impressions
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
