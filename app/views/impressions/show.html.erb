@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Common value:</b>
+  <%= @impression.common_value %>
+</p>
+
+<p>
+  <b>Summable value:</b>
+  <%= @impression.summable_value %>
+</p>
+
+
+<%= link_to 'Edit', edit_impression_path(@impression) %> |
+<%= link_to 'Back', impressions_path %>

@@ -9,8 +9,9 @@
 #  updated_at     :datetime
 #
 
-class Impression < ActiveRecord::Base
-  validates_presence_of :common_value
-  validates_presence_of :summable_value
+require 'spec_helper'
 
+describe Impression do
+  it { should validate_presence_of :common_value }
+  it { should validate_presence_of :summable_value }
 end
