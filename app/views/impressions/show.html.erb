@@ -13,3 +13,27 @@
 
 <%= link_to 'Edit', edit_impression_path(@impression) %> |
 <%= link_to 'Back', impressions_path %>
+
+<br />
+<br />
+<br />
+<br />
+
+<script type="text/javascript" src="http://api.reportgrid.com/js/reportgrid-core.js?tokenId=<%= REPORTGRID_TOKEN %>"></script>
+<script type="text/javascript" src="http://api.reportgrid.com/js/reportgrid-viz.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function(){
+      ReportGrid.barChart("#chart", 
+        { 
+path : "/tracking_set/<%= @impression.common_value %>", 
+event : "impression", 
+property : "summable_value",
+periodicity : "minute"
+
+}, false)
+});
+
+    </script>
+
+
+<div id="chart"></div>
